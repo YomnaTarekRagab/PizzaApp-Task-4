@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--LLBLGen Pro v5.5 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="5.5" TargetFrameworkName="LLBLGen Pro Runtime Framework" UseLegacyDefaults="false">
+  <Properties>
+    <Abbreviations />
+    <Property Name="AdditionalTaskPerformerFolder" Value="" />
+    <Property Name="AdditionalTasksFolder" Value="" />
+    <Property Name="AdditionalTemplatesFolder" Value="" />
+    <Property Name="AdditionalTypeConverterFolder" Value="" />
+    <Property Name="AddNewElementsAfterRefresh_v5" Value="false" />
+    <Property Name="AddNewElementsAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="AddNewFieldsAfterRefresh_v5" Value="true" />
+    <Property Name="AddNewFieldsAfterRelationalModelDataSync_v5" Value="true" />
+    <Property Name="AddNewViewsAsEntitiesAfterRefresh_v5" Value="false" />
+    <Property Name="AddNewViewsAsEntitiesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="AutoAddManyToManyRelationships" Value="false" />
+    <Property Name="AutoAssignSequencesToIntegerPks" Value="true" />
+    <Property Name="AutoAssignTypeConverterToFieldMapping" Value="true" />
+    <Property Name="ConnectionStringKeyNamePattern" Value="ConnectionString.{$ProviderName}" />
+    <Property Name="DefaultDeleteRuleAction" Value="1" />
+    <Property Name="DefaultUpdateRuleAction" Value="0" />
+    <Property Name="EncodingToUse" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForTable" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForView" Value="4" />
+    <Property Name="EntityFieldNameStripPattern" Value="{}{}" />
+    <Property Name="EntityNameStripPattern" Value="{tbl_}{}" />
+    <Property Name="ExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="FailCodeGenerationOnWriteError" Value="false" />
+    <Property Name="FieldMappedOntoRelatedFieldPattern" Value="{$RelatedFieldName}" />
+    <Property Name="FkFieldsAreNamedAfterTargetField" Value="true" />
+    <Property Name="ForeignKeyConstraintPattern" Value="FK_{$Guid}" />
+    <Property Name="ForeignKeyFieldPattern" Value="{$NavigatorName}{$RelatedFieldName}" />
+    <Property Name="GroupUsage" Value="0" />
+    <Property Name="IdentifyingFieldsFollowDBPrimaryKeyConstraints_v5" Value="true" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseInsensitiveDBs" Value="false" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseSensitiveDBs" Value="false" />
+    <Property Name="LengthPrecisionScaleFollowDBLengthPrecisionScale_v5" Value="true" />
+    <Property Name="MakeElementNamePascalCasing" Value="true" />
+    <Property Name="NavigatorMappedOntoManyToManyPattern" Value="{$EndEntityName}CollectionVia{$IntermediateEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneManyToOnePattern" Value="{$EndEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneToManyPattern" Value="{$EndEntityName$P}" />
+    <Property Name="NonExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="PreferDecimalOverCurrencyTypes" Value="true" />
+    <Property Name="PreferNaturalCharacterTypes" Value="true" />
+    <Property Name="PreferSystemSequencesOverSchemaSequencesIfApplicable" Value="true" />
+    <Property Name="PreferVariableLengthTypes" Value="true" />
+    <Property Name="PrimaryKeyConstraintPattern" Value="PK_{$Guid}" />
+    <Property Name="ProjectCreator" Value="Yomna" />
+    <Property Name="ProjectName" Value="PizzaAppData" />
+    <Property Name="ReflectNullabilityOfElementFieldInTargetField_v5" Value="false" />
+    <Property Name="ReflectTypeOfElementFieldInTargetField_v5" Value="true" />
+    <Property Name="RelationalModelDataElementNameCasingCaseInsensitiveDBs" Value="3" />
+    <Property Name="RelationalModelDataElementNameCasingCaseSensitiveDBs" Value="3" />
+    <Property Name="RelationshipsFollowDBForeignKeyConstraints_v5" Value="true" />
+    <Property Name="RemoveUnderscoresFromElementName" Value="true" />
+    <Property Name="RemoveUnmappedElementsAfterRefresh_v5" Value="false" />
+    <Property Name="RemoveUnmappedElementsAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRefresh" Value="false" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRelationalModelDataSync" Value="false" />
+    <Property Name="RetrieveDBCustomProperties" Value="false" />
+    <Property Name="RootNamespace" Value="" />
+    <Property Name="SequenceNameMatchingPattern" Value="SEQ_{$TableName}" />
+    <Property Name="SequencePattern" Value="SEQ_{$EntityName}" />
+    <Property Name="SetGroupNameAfterSchemaName" Value="true" />
+    <Property Name="SetSchemaNameAfterGroupName" Value="true" />
+    <Property Name="SingularizeElementNames" Value="true" />
+    <Property Name="StoredProcNameStripPattern" Value="{pr_, sp_}{}" />
+    <Property Name="StoreTimeLastGeneratedIntoProject" Value="false" />
+    <Property Name="StoreTimeLastSyncIntoProject" Value="true" />
+    <Property Name="SyncMappedElementNamesAfterRefresh_v5" Value="false" />
+    <Property Name="SyncMappedElementNamesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="SyncRelationalModelDataElementNameWithModelElementName_v5" Value="false" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRefresh_v5" Value="false" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="TableValuedFunctionNameStripPattern" Value="{fn_, pr_, sp_}{}" />
+    <Property Name="TargetPerEntityEdgesRequireBackingFkConstraint" Value="true" />
+    <Property Name="TypedViewFieldNameStripPattern" Value="{}{}" />
+    <Property Name="TypedViewMappedOnResultsetPattern" Value="{$ProcFunctionName}{$ResultsetName}Result" />
+    <Property Name="TypedViewNameStripPattern" Value="{vw_}{}" />
+    <Property Name="UniqueConstraintPattern" Value="UC_{$Guid}" />
+    <Property Name="UniqueConstraintsFollowDBUniqueConstraints_v5" Value="true" />
+    <Property Name="UpdateCustomPropertiesAfterRefresh_v5" Value="false" />
+    <Property Name="UpdateCustomPropertiesAfterRelationalModelDataSync_v5" Value="false" />
+    <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
+  </Properties>
+  <TypeShortcuts />
+  <IgnoredWarnings />
+  <SavedSearchQueries />
+  <CodeGenerationMetaDataDefaults>
+    <TargetElement Type="256">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Browsable($false)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+  </CodeGenerationMetaDataDefaults>
+  <EntityModel>
+    <ValueTypeDefinitions />
+    <EntityDefinitions>
+      <EntityDefinition Name="OrdersList" ObjectID="ab1e4e13-9d8e-42e4-9d6c-4272f0d0cee9">
+        <Fields>
+          <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="NumberOfPizzas" Type="int" Precision="10" />
+          <Field Name="TotalPrice" Type="double" Precision="38" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="PizzaSide" ObjectID="3e073eca-ada5-4c78-a131-8ba92b771cf3">
+        <Fields>
+          <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="Price" Type="double" Precision="38" />
+          <Field Name="Type" Type="string" MaxLength="1073741824" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="PizzaSize" ObjectID="09a54157-4696-4524-8b42-8f38ba69afaf">
+        <Fields>
+          <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="Price" Type="double" Precision="38" />
+          <Field Name="Type" Type="string" MaxLength="1073741824" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="PizzasList" ObjectID="2489fbae-eaa6-41d6-af7d-3ca720bf768d">
+        <Fields>
+          <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="OrderId" Type="int" Precision="10" IsPrimaryKey="true" />
+          <Field Name="PricePerPizza" Type="double" Precision="38" />
+          <Field Name="Side" Type="string" MaxLength="1073741824" />
+          <Field Name="Size" Type="string" MaxLength="1073741824" />
+          <Field Name="Topping" Type="string" MaxLength="1073741824" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="PizzaTopping" ObjectID="3d0f90c2-5bb0-4411-b1ee-e93904ceee37">
+        <Fields>
+          <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="Price" Type="double" Precision="38" />
+          <Field Name="Type" Type="string" MaxLength="1073741824" />
+        </Fields>
+      </EntityDefinition>
+    </EntityDefinitions>
+    <Relationships>
+      <NormalRelationship Name="PizzasList.OrdersList-OrdersList.PizzasLists" Start=":PizzasList" End=":OrdersList" StartNavigator="OrdersList" EndNavigator="PizzasLists" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrderId" PkField="Id" />
+        </FieldRelationships>
+      </NormalRelationship>
+    </Relationships>
+    <InheritanceHierarchies />
+  </EntityModel>
+  <TargetDatabases>
+    <TargetDatabase Type="88EBFD8C-CBDD-4452-88AF-1C99E41A123F" SyncSource="2">
+      <ConnectionElements>
+        <ConnectionElement Name="ServerName" Value="localhost" />
+        <ConnectionElement Name="CatalogName" Value="pizza_app" />
+        <ConnectionElement Name="UserID" Value="postgres" />
+        <ConnectionElement Name="Password" Value="" />
+        <ConnectionElement Name="PortNumber" Value="5432" />
+        <ConnectionElement Name="SslMode" Value="Disable" />
+      </ConnectionElements>
+      <SystemSequences>
+        <Sequence Name="SystemIdentity" />
+      </SystemSequences>
+      <Catalogs>
+        <Catalog Name="pizza_app" SyncSource="2">
+          <Schemas>
+            <Schema Name="public" SyncSource="2" LastSyncWithDatabase="2021-08-30T14:27:20.8233662Z">
+              <Sequences>
+                <Sequence Name="orders_list_id_seq" />
+                <Sequence Name="pizza_sides_id_seq" />
+                <Sequence Name="pizza_sizes_id_seq" />
+                <Sequence Name="pizza_toppings_id_seq" />
+                <Sequence Name="pizzas_list_id_seq" />
+              </Sequences>
+              <Tables>
+                <Table Name="orders_list">
+                  <PkConstraintName Name="PK_orders_list" />
+                  <Fields>
+                    <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('orders_list_id_seq'::regclass)" DefaultSequence="pizza_app:public:orders_list_id_seq" DbType="9" Precision="10" />
+                    <Field Name="number_of_pizzas" Ordinal="2" DbType="9" Precision="10" />
+                    <Field Name="total_price" Ordinal="3" DbType="7" Precision="38" />
+                  </Fields>
+                </Table>
+                <Table Name="pizza_sides">
+                  <PkConstraintName Name="PK_pizza_sides" />
+                  <Fields>
+                    <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('pizza_sides_id_seq'::regclass)" DefaultSequence="pizza_app:public:pizza_sides_id_seq" DbType="9" Precision="10" />
+                    <Field Name="type" Ordinal="2" DbType="19" Length="1073741824" />
+                    <Field Name="price" Ordinal="3" DbType="7" Precision="38" />
+                  </Fields>
+                </Table>
+                <Table Name="pizza_sizes">
+                  <PkConstraintName Name="PK_pizza_sizes" />
+                  <Fields>
+                    <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('pizza_sizes_id_seq'::regclass)" DefaultSequence="pizza_app:public:pizza_sizes_id_seq" DbType="9" Precision="10" />
+                    <Field Name="type" Ordinal="2" DbType="19" Length="1073741824" />
+                    <Field Name="price" Ordinal="3" DbType="7" Precision="38" />
+                  </Fields>
+                </Table>
+                <Table Name="pizza_toppings">
+                  <PkConstraintName Name="PK_pizza_toppings" />
+                  <Fields>
+                    <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('pizza_toppings_id_seq'::regclass)" DefaultSequence="pizza_app:public:pizza_toppings_id_seq" DbType="9" Precision="10" />
+                    <Field Name="type" Ordinal="2" DbType="19" Length="1073741824" />
+                    <Field Name="price" Ordinal="3" DbType="7" Precision="38" />
+                  </Fields>
+                </Table>
+                <Table Name="pizzas_list">
+                  <PkConstraintName Name="PK_pizzas_list" />
+                  <Fields>
+                    <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('pizzas_list_id_seq'::regclass)" DefaultSequence="pizza_app:public:pizzas_list_id_seq" DbType="9" Precision="10" />
+                    <Field Name="order_id" Ordinal="2" IsPrimaryKey="true" DbType="9" Precision="10" />
+                    <Field Name="topping" Ordinal="3" DbType="19" Length="1073741824" />
+                    <Field Name="size" Ordinal="4" DbType="19" Length="1073741824" />
+                    <Field Name="side" Ordinal="5" DbType="19" Length="1073741824" />
+                    <Field Name="price_per_pizza" Ordinal="6" DbType="7" Precision="38" />
+                  </Fields>
+                </Table>
+              </Tables>
+            </Schema>
+          </Schemas>
+          <ForeignKeyConstraints>
+            <ForeignKeyConstraint Name="public:pizzas_list:FK_pizzas_list_order_id_orders_list_id">
+              <FieldPairs>
+                <FieldPair PkField="public:orders_list:id" FkField="public:pizzas_list:order_id" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+          </ForeignKeyConstraints>
+        </Catalog>
+      </Catalogs>
+    </TargetDatabase>
+  </TargetDatabases>
+  <MappingStores>
+    <MappingStore Type="88EBFD8C-CBDD-4452-88AF-1C99E41A123F">
+      <EntityMappings>
+        <EntityMapping EntityName=":OrdersList" TargetName="pizza_app:public:orders_list">
+          <FieldMappings>
+            <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:orders_list_id_seq" />
+            <FieldMapping FieldName="NumberOfPizzas" TargetFieldName="number_of_pizzas" />
+            <FieldMapping FieldName="TotalPrice" TargetFieldName="total_price" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":PizzaSide" TargetName="pizza_app:public:pizza_sides">
+          <FieldMappings>
+            <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:pizza_sides_id_seq" />
+            <FieldMapping FieldName="Price" TargetFieldName="price" />
+            <FieldMapping FieldName="Type" TargetFieldName="type" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":PizzaSize" TargetName="pizza_app:public:pizza_sizes">
+          <FieldMappings>
+            <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:pizza_sizes_id_seq" />
+            <FieldMapping FieldName="Price" TargetFieldName="price" />
+            <FieldMapping FieldName="Type" TargetFieldName="type" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":PizzasList" TargetName="pizza_app:public:pizzas_list">
+          <FieldMappings>
+            <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:pizzas_list_id_seq" />
+            <FieldMapping FieldName="OrderId" TargetFieldName="order_id" />
+            <FieldMapping FieldName="PricePerPizza" TargetFieldName="price_per_pizza" />
+            <FieldMapping FieldName="Side" TargetFieldName="side" />
+            <FieldMapping FieldName="Size" TargetFieldName="size" />
+            <FieldMapping FieldName="Topping" TargetFieldName="topping" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":PizzaTopping" TargetName="pizza_app:public:pizza_toppings">
+          <FieldMappings>
+            <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:pizza_toppings_id_seq" />
+            <FieldMapping FieldName="Price" TargetFieldName="price" />
+            <FieldMapping FieldName="Type" TargetFieldName="type" />
+          </FieldMappings>
+        </EntityMapping>
+      </EntityMappings>
+      <TypedViewMappings />
+      <SPCallMappings />
+      <TvfCallMappings />
+      <TypeConversionDefinitions />
+    </MappingStore>
+  </MappingStores>
+  <ModelViews />
+</Project>
