@@ -1,24 +1,24 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace PizzaApp
 {
     public class Order
     {
-        private const float Taxes = 15.0f;
-        private static int currentId = 0;
+        private const float _taxes = 15.0f;
+        private static int _currentId = 0;
         public float TotalPrice { get; set; }
         public int NumOfPizzas { get; set; }
         public int UserId
         {
             get
             {
-                return currentId;
+                return _currentId;
             }
         }
         public List<Pizza> ListOfPizzas { get; set; }
         public Order()
         {
-            currentId++;
+            _currentId++;
         }
         public bool AddPizza(Pizza tobeAddedPizza)
         {
@@ -38,7 +38,7 @@ namespace PizzaApp
             {
                 TotalPrice += item.CalculatePrice();
             }
-            TotalPrice += Taxes;
+            TotalPrice += _taxes;
             return this.TotalPrice;
         }
     }
