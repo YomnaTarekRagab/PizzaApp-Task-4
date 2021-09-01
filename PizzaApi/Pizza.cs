@@ -5,17 +5,17 @@ namespace PizzaApp
     public class Pizza
     {
         public record TypeXPrice(string Type, float Price);
-        private float Price = 0;
+        private float _price = 0;
         public TypeXPrice Topping { get; set; }
         public TypeXPrice Size { get; set; }
         public TypeXPrice Side { get; set; }
         public float CalculatePrice()
         {
-            if (this.Price == 0)
+            if (this._price == 0)
             {
-                this.Price += this.Topping.Price + this.Size.Price + this.Side.Price;
+                this._price += this.Topping.Price + this.Size.Price + this.Side.Price;
             }
-            return this.Price;
+            return this._price;
         }
     }
 }
