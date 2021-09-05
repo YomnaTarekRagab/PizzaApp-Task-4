@@ -37,6 +37,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderView", "Data\OrderView
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderView.Persistence", "Data\OrderView.Persistence\OrderView.Persistence.csproj", "{CC57D6BA-C965-48A4-BA64-C1ACA3E06F5F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PizzaAppRazor", "PizzaAppRazor", "{87FE84D0-ED1A-42C1-97C7-1AB3882E233A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaAppRazor", "PizzaAppRazor\PizzaAppRazor.csproj", "{E4DB31A2-5464-4E2D-A917-52F6489CEADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,10 @@ Global
 		{CC57D6BA-C965-48A4-BA64-C1ACA3E06F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC57D6BA-C965-48A4-BA64-C1ACA3E06F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC57D6BA-C965-48A4-BA64-C1ACA3E06F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DB31A2-5464-4E2D-A917-52F6489CEADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DB31A2-5464-4E2D-A917-52F6489CEADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DB31A2-5464-4E2D-A917-52F6489CEADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DB31A2-5464-4E2D-A917-52F6489CEADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +95,7 @@ Global
 		{074C9179-4DF2-48EE-9F9F-3CBB3499D984} = {43BCFE22-672D-4654-91E5-CF3D659023FC}
 		{5D66DCCB-2785-40B9-98D1-32B9BE12965A} = {18D98E8D-944F-46E9-8F8B-6168BE9AFEB7}
 		{CC57D6BA-C965-48A4-BA64-C1ACA3E06F5F} = {4EE3318F-607A-4372-93EC-22BB1A45DD2A}
+		{E4DB31A2-5464-4E2D-A917-52F6489CEADB} = {87FE84D0-ED1A-42C1-97C7-1AB3882E233A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC7367CB-A688-4F2B-9951-B1861401CE10}
