@@ -23,10 +23,15 @@ namespace PizzaAppRazor.Pages
         public OrderFormModel(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
+            
         }
 
         public async Task OnGet()
         {
+            //Console.WriteLine($"hello:{ TempData["NumOfPizzasOrder"]}");
+            //var num = JsonConvert.DeserializeObject<string>(TempData["NumOfPizzasOrder"].ToString());
+            //NumOfPizzasForm = Convert.ToInt32(num);
+            //PrefOrder.NumOfPizzas =NumOfPizzasForm;
             var request = new HttpRequestMessage(HttpMethod.Get, "/components");
             var client = _clientFactory.CreateClient("PizzaAppApi");
             var response = await client.SendAsync(request);
@@ -48,8 +53,10 @@ namespace PizzaAppRazor.Pages
             request.Content = new StringContent(JsonConvert.SerializeObject(PrefOrder), System.Text.Encoding.UTF8, "application/json");
             var client = _clientFactory.CreateClient("PizzaAppApi");
             var response = await client.SendAsync(request);
-            return Redirect("/Index");
+            return RedirectToPage("/Index");
         }
+
+
     }
 
 }

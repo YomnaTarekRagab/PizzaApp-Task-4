@@ -1,13 +1,13 @@
 ﻿@page
+
 @model PizzaAppRazor.Pages.OrderFormModel
 @{
     ViewData["Title"] = "Order Form page";
-}
 
+}
 <div class="text-center">
     <h1 class="display-2 text-alert fst-italic fw-bold"> Order Form</h1>
 </div>
-
 <form method="post">
     <div class="mb-3">
         <table class="table table-danger table-hover table-sm">
@@ -29,19 +29,6 @@
         </table>
     </div>
     <div class="mb-3">
-        <h5 class="text-primary fst-italic">Chosen Pizza Topping:</h5>
-        <select for="toppings" class="Default select example" name="Toppings">
-            @foreach (var item in Model.PizzaMenu.Toppings)
-            {
-                <option class="form-select" asp-for="item.Type" id="pizzaToppings"
-                        asp-items="item.Type">
-                    @item.Type
-                </option>
-            }
-
-        </select>
-    </div>
-    <div class="mb-3">
         <table class="table table-danger table-hover table-sm">
             <thead>
                 <tr class="text-center">
@@ -59,19 +46,6 @@
                 }
             </tbody>
         </table>
-    </div>
-    <div class="mb-3">
-        <h5 class="text-primary fst-italic">Chosen Pizza Size:</h5>
-        <select for="sizes" class="Default select example" name="Sizes">
-            @foreach (var item in Model.PizzaMenu.Sizes)
-            {
-                <option class="form-select" asp-for="item.Type" id="pizzaSizes"
-                        asp-items="item.Type">
-                    @item.Type
-                </option>
-            }
-
-        </select>
     </div>
     <div class="mb-3">
         <table class="table table-danger table-hover table-sm">
@@ -93,31 +67,56 @@
         </table>
     </div>
     <div class="mb-3">
-        <h5 class="text-primary fst-italic"> Chosen Pizza Side:</h5>
-        <select for="sides" class="Default select example" name="Sides">
-            @foreach (var item in Model.PizzaMenu.Sides)
-            {
-                <option class="form-select" asp-for="item.Type" id="pizzaSides"
-                        asp-items="item.Type">
-                    @item.Type
-                </option>
-            }
+        @for (int i = 1; i <= Convert.ToInt32(TempData["NumOfPizzasOrder"]); i++)
+        {
+            <h4 class="text-danger">This is Pizza @i of @TempData["NumOfPizzasOrder"] Pizzas </h4>
+            <div class="mb-3">
+                <h5 class="text-primary fst-italic">Chosen Pizza Topping:</h5>
+                <select for="toppings" class="Default select example" name="Toppings">
+                    @foreach (var item in Model.PizzaMenu.Toppings)
+                    {
+                        <option class="form-select" asp-for="item.Type" id="pizzaToppings"
+                                asp-items="item.Type">
+                            @item.Type
+                        </option>
+                    }
 
-        </select>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <h5 class="text-primary fst-italic">Chosen Pizza Size:</h5>
+                <select for="sizes" class="Default select example" name="Sizes">
+                    @foreach (var item in Model.PizzaMenu.Sizes)
+                    {
+                        <option class="form-select" asp-for="item.Type" id="pizzaSizes"
+                                asp-items="item.Type">
+                            @item.Type
+                        </option>
+                    }
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <h5 class="text-primary fst-italic"> Chosen Pizza Side:</h5>
+                <select for="sides" class="Default select example" name="Sides">
+                    @foreach (var item in Model.PizzaMenu.Sides)
+                    {
+                        <option class="form-select" asp-for="item.Type" id="pizzaSides"
+                                asp-items="item.Type">
+                            @item.Type
+                        </option>
+                    }
+
+                </select>
+            </div>
+            <br />
+        }
     </div>
-    <br />
-    @if (Convert.ToInt32(TempData["NumberOfPizzas"]) > 1)
-    {
+    <div class="align-items-center">
+        <button type="submit" class="btn btn-primary" href="/Index" >Create Order</button>
+    </div>
+    
 
-        <div class="align-items-center">
-            <button type="submit" class="btn btn-primary">Add new Pizza</button>
-        </div>
-        <br />
-    }
-    else
-    {
-        <div class="align-items-center">
-            <button type="submit" class="btn btn-primary" href="/Index">Create Order</button>
-        </div>
-    }
 </form>

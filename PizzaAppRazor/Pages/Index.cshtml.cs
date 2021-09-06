@@ -13,15 +13,16 @@ namespace PizzaAppRazor.Pages
 {
     public class IndexModel : PageModel
     {
-        [BindProperty]
+        [BindProperty, TempData]
         public int NumOfPizzasOrder { get; set; }
 
         public IActionResult OnPost()
         {
-            //TempData["NumberOfPizzas"] = NumOfPizzasOrder;
-            //TempData.Peek("NumberOfPizzas");
-            //TempData.Keep("NumberOfPizzas");
-            //Console.WriteLine($"From the Index page:{NumOfPizzasOrder}");
+            NumOfPizzasOrder = Convert.ToInt32(Request.Form["NumOfPizzasOrder"]);
+            TempData["NumberOfPizzas"] = NumOfPizzasOrder;
+            TempData.Peek("NumberOfPizzas");
+            TempData.Keep("NumberOfPizzas");
+            Console.WriteLine($"From the Index page:{NumOfPizzasOrder}");
             return RedirectToPage("/OrderForm");
         }
     }
