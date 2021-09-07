@@ -42,7 +42,7 @@ app.MapPost("/createPizza", async([FromBody] Order receivedOrder) =>
     OrdersListEntity orderRow = new OrdersListEntity();
     orderRow.Id = receivedOrder.UserId;
     var orderId = orderRow.Id;
-    orderRow.NumberOfPizzas = receivedOrder.NumOfPizzas;
+    //orderRow.NumberOfPizzas = receivedOrder.NumOfPizzas;
     orderRow.TotalPrice = receivedOrder.OrderPrice();
     await adapter.SaveEntityAsync(orderRow, true);
     adapter.Commit();

@@ -18,8 +18,7 @@ namespace PizzaAppRazor.Pages
         public PizzaModel PizzaMenu { get; set; }
         [BindProperty]
         public Order PrefOrder { get; set; }
-        [BindProperty]
-        public Pizza SinglePizza { get; set; }
+       
         public OrderFormModel(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;

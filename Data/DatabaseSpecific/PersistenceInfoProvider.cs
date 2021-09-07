@@ -46,10 +46,9 @@ namespace PizzaAppData.DatabaseSpecific
 		/// <summary>Inits OrdersListEntity's mappings</summary>
 		private void InitOrdersListEntityMappings()
 		{
-			this.AddElementMapping("OrdersListEntity", @"pizza_app", @"public", "orders_list", 3, 0);
+			this.AddElementMapping("OrdersListEntity", @"pizza_app", @"public", "orders_list", 2, 0);
 			this.AddElementFieldMapping("OrdersListEntity", "Id", "id", false, "Integer", 0, 10, 0, true, "public.orders_list_id_seq", null, typeof(System.Int32), 0);
-			this.AddElementFieldMapping("OrdersListEntity", "NumberOfPizzas", "number_of_pizzas", false, "Integer", 0, 10, 0, false, "", null, typeof(System.Int32), 1);
-			this.AddElementFieldMapping("OrdersListEntity", "TotalPrice", "total_price", false, "Double", 0, 38, 0, false, "", null, typeof(System.Double), 2);
+			this.AddElementFieldMapping("OrdersListEntity", "TotalPrice", "total_price", false, "Double", 0, 38, 0, false, "", null, typeof(System.Double), 1);
 		}
 
 		/// <summary>Inits PizzaSideEntity's mappings</summary>

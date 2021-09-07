@@ -1,0 +1,10 @@
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\bin\Debug\netstandard2.0\OrderView.deps.json
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\bin\Debug\netstandard2.0\OrderView.dll
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\bin\Debug\netstandard2.0\OrderView.pdb
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.AssemblyInfo.cs
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.dll
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\OrderView\obj\Debug\netstandard2.0\OrderView.pdb

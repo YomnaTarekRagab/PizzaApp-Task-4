@@ -7,7 +7,7 @@ namespace PizzaApp
         private const float _taxes = 15.0f;
         private static int _currentId = 0;
         public float TotalPrice { get; set; }
-        public int NumOfPizzas { get; set; }
+        //public int NumOfPizzas { get; set; }
         public int UserId
         {
             get

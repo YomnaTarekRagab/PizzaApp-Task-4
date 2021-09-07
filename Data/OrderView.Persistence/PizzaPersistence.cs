@@ -40,7 +40,6 @@ namespace OrderView.Persistence
 			return p__0 => new OrderView.DtoClasses.Pizza()
 			{
 				Id = p__0.Id,
-				NumberOfPizzas = p__0.NumberOfPizzas,
 				PizzasLists = p__0.PizzasLists.Select(p__1 => new OrderView.DtoClasses.PizzaTypes.PizzasList()
 				{
 					Id = p__1.Id,

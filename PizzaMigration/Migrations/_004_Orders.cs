@@ -14,7 +14,7 @@ namespace PizzaMigration.Migrations
         {
             Create.Table("orders_list")
                             .WithIdColumn()
-                            .WithColumn("number_of_pizzas").AsInt32().NotNullable()
+                            //.WithColumn("number_of_pizzas").AsInt32().NotNullable()
                             .WithColumn("total_price").AsDouble().NotNullable();
                             
         }

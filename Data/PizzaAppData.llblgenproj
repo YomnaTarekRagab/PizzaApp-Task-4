@@ -117,28 +117,27 @@
   <EntityModel>
     <ValueTypeDefinitions />
     <EntityDefinitions>
-      <EntityDefinition Name="OrdersList" ObjectID="ab1e4e13-9d8e-42e4-9d6c-4272f0d0cee9">
+      <EntityDefinition Name="OrdersList" ObjectID="028e5bcc-f77c-4ea3-9214-36400b0f489b">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
-          <Field Name="NumberOfPizzas" Type="int" Precision="10" />
           <Field Name="TotalPrice" Type="double" Precision="38" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaSide" ObjectID="3e073eca-ada5-4c78-a131-8ba92b771cf3">
+      <EntityDefinition Name="PizzaSide" ObjectID="815f0789-dd5f-4eb0-a6d5-8bd26760559e">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
           <Field Name="Type" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaSize" ObjectID="09a54157-4696-4524-8b42-8f38ba69afaf">
+      <EntityDefinition Name="PizzaSize" ObjectID="b62d5799-f8e7-4f97-925b-401b1dfd6549">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
           <Field Name="Type" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzasList" ObjectID="2489fbae-eaa6-41d6-af7d-3ca720bf768d">
+      <EntityDefinition Name="PizzasList" ObjectID="14a82f1a-b475-4fe6-a41e-fd3fb1109175">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="OrderId" Type="int" Precision="10" IsPrimaryKey="true" />
@@ -148,7 +147,7 @@
           <Field Name="Topping" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaTopping" ObjectID="3d0f90c2-5bb0-4411-b1ee-e93904ceee37">
+      <EntityDefinition Name="PizzaTopping" ObjectID="dcd01af4-a133-484a-81a0-cef70c0b9075">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
@@ -181,7 +180,7 @@
       <Catalogs>
         <Catalog Name="pizza_app">
           <Schemas>
-            <Schema Name="public" SyncSource="2" LastSyncWithDatabase="2021-08-30T14:27:47.6211243Z">
+            <Schema Name="public" SyncSource="2" LastSyncWithDatabase="2021-09-06T14:14:41.6322316Z">
               <Sequences>
                 <Sequence Name="orders_list_id_seq" />
                 <Sequence Name="pizza_sides_id_seq" />
@@ -194,8 +193,7 @@
                   <PkConstraintName Name="PK_orders_list" />
                   <Fields>
                     <Field Name="id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" HasDefaultValue="true" DefaultValue="nextval('orders_list_id_seq'::regclass)" DefaultSequence="pizza_app:public:orders_list_id_seq" DbType="9" Precision="10" />
-                    <Field Name="number_of_pizzas" Ordinal="2" DbType="9" Precision="10" />
-                    <Field Name="total_price" Ordinal="3" DbType="7" Precision="38" />
+                    <Field Name="total_price" Ordinal="2" DbType="7" Precision="38" />
                   </Fields>
                 </Table>
                 <Table Name="pizza_sides">
@@ -253,7 +251,6 @@
         <EntityMapping EntityName=":OrdersList" TargetName="pizza_app:public:orders_list">
           <FieldMappings>
             <FieldMapping FieldName="Id" TargetFieldName="id" SequenceToUse="pizza_app:public:orders_list_id_seq" />
-            <FieldMapping FieldName="NumberOfPizzas" TargetFieldName="number_of_pizzas" />
             <FieldMapping FieldName="TotalPrice" TargetFieldName="total_price" />
           </FieldMappings>
         </EntityMapping>
@@ -297,7 +294,7 @@
   </MappingStores>
   <ModelViews />
   <DerivedModels>
-    <DerivedModel Name="OrderView" ObjectID="74543c45-9f6f-46e1-a3fb-5302127c5e5e" TargetFrameworkName="DTO Class Model" UseLegacyDefaults="false">
+    <DerivedModel Name="OrderView" ObjectID="3496d055-cef2-417a-bb71-20103fd11800" TargetFrameworkName="DTO Class Model" UseLegacyDefaults="false">
       <CodeGenerationMetaDataDefaults>
         <TargetElement Type="32768">
           <Defaults>
@@ -363,9 +360,6 @@
           <Fields>
             <Field Name="Id">
               <EntityField Name="Id" />
-            </Field>
-            <Field Name="NumberOfPizzas">
-              <EntityField Name="NumberOfPizzas" />
             </Field>
             <Field Name="PizzasLists">
               <Document Name="PizzasList">

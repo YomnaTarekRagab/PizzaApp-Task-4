@@ -54,7 +54,6 @@ namespace PizzaAppData.HelperClasses
 		{
 			this.AddFieldIndexEnumForElementName(typeof(OrdersListFieldIndex), "OrdersListEntity");
 			this.AddElementFieldInfo("OrdersListEntity", "Id", typeof(System.Int32), true, false, true, false,  (int)OrdersListFieldIndex.Id, 0, 0, 10);
-			this.AddElementFieldInfo("OrdersListEntity", "NumberOfPizzas", typeof(System.Int32), false, false, false, false,  (int)OrdersListFieldIndex.NumberOfPizzas, 0, 0, 10);
 			this.AddElementFieldInfo("OrdersListEntity", "TotalPrice", typeof(System.Double), false, false, false, false,  (int)OrdersListFieldIndex.TotalPrice, 0, 0, 38);
 		}
 

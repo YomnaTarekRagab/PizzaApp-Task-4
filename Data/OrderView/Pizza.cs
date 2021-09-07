@@ -16,9 +16,6 @@ namespace OrderView.DtoClasses
 		/// <summary>Gets or sets the Id field. Derived from Entity Model Field 'OrdersList.Id'</summary>
 		[DataMember]
 		public System.Int32 Id { get; set; }
-		/// <summary>Gets or sets the NumberOfPizzas field. Derived from Entity Model Field 'OrdersList.NumberOfPizzas'</summary>
-		[DataMember]
-		public System.Int32 NumberOfPizzas { get; set; }
 		/// <summary>Gets or sets the PizzasLists field. </summary>
 		[DataMember]
 		public List<PizzaTypes.PizzasList> PizzasLists { get; set; }
