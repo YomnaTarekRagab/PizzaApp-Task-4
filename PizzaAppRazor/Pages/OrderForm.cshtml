@@ -1,9 +1,9 @@
 ﻿@page
-
+@using PizzaAppRazor.DTOs
 @model PizzaAppRazor.Pages.OrderFormModel
 @{
     ViewData["Title"] = "Order Form page";
-
+    
 }
 <div class="text-center">
     <h1 class="display-2 text-alert fst-italic fw-bold"> Order Form</h1>
@@ -72,10 +72,10 @@
             <h4 class="text-danger">This is Pizza @i of @TempData["NumOfPizzasOrder"] Pizzas </h4>
             <div class="mb-3">
                 <h5 class="text-primary fst-italic">Chosen Pizza Topping:</h5>
-                <select for="toppings" class="Default select example" name="Toppings">
+                <select class="Default select example" asp-for="SinglePizza.Topping.Type">
                     @foreach (var item in Model.PizzaMenu.Toppings)
                     {
-                        <option class="form-select" asp-for="item.Type" id="pizzaToppings"
+                        <option class="form-select" id="pizzaToppings"
                                 asp-items="item.Type">
                             @item.Type
                         </option>
@@ -86,10 +86,10 @@
 
             <div class="mb-3">
                 <h5 class="text-primary fst-italic">Chosen Pizza Size:</h5>
-                <select for="sizes" class="Default select example" name="Sizes">
+                <select class="Default select example" asp-for="SinglePizza.Size.Type">
                     @foreach (var item in Model.PizzaMenu.Sizes)
                     {
-                        <option class="form-select" asp-for="item.Type" id="pizzaSizes"
+                        <option class="form-select" id="pizzaSizes"
                                 asp-items="item.Type">
                             @item.Type
                         </option>
@@ -100,10 +100,10 @@
 
             <div class="mb-3">
                 <h5 class="text-primary fst-italic"> Chosen Pizza Side:</h5>
-                <select for="sides" class="Default select example" name="Sides">
+                <select class="Default select example" asp-for="SinglePizza.Side.Type">
                     @foreach (var item in Model.PizzaMenu.Sides)
                     {
-                        <option class="form-select" asp-for="item.Type" id="pizzaSides"
+                        <option class="form-select" id="pizzaSides"
                                 asp-items="item.Type">
                             @item.Type
                         </option>
@@ -112,11 +112,15 @@
                 </select>
             </div>
             <br />
+            //Here the pizza should be added to the List of pizzas in PrefOrder before the next iteration
+            <div class="align-items-center">
+                <input type="button"  class="btn btn-primary" asp-action="AddPizzaToOrder" value="Add Pizza" /> 
+            </div>
         }
     </div>
     <div class="align-items-center">
-        <button type="submit" class="btn btn-primary" href="/Index" >Create Order</button>
+        <button type="submit" class="btn btn-primary" href="/Index">Create Order</button>
     </div>
-    
+
 
 </form>

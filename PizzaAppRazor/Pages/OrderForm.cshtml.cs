@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PizzaAppRazor.Models;
+using PizzaAppRazor.DTOs;
 using PizzaAppRazor.Pages;
 using Newtonsoft.Json;
  
@@ -17,7 +17,9 @@ namespace PizzaAppRazor.Pages
         private readonly IHttpClientFactory _clientFactory;
         public PizzaModel PizzaMenu { get; set; }
         [BindProperty]
-        public Order PrefOrder { get; set; }
+        public Order PrefOrder { get; set; } = new Order();
+        [BindProperty]
+        public Pizza SinglePizza { get; set; } = new Pizza ();
        
         public OrderFormModel(IHttpClientFactory clientFactory)
         {
@@ -44,6 +46,14 @@ namespace PizzaAppRazor.Pages
                 PizzaMenu = System.Text.Json.JsonSerializer.Deserialize<PizzaModel>(serializedResponse, options);
             }
         }
+
+       
+        //public void AddPizzaToOrder()
+        //{
+        //    PrefOrder.AddPizza(this.SinglePizza);
+        //    Console.WriteLine($"Lists:{PrefOrder.ListOfPizzas}");
+
+        //}
 
         public async Task <IActionResult> OnPost()
         {
