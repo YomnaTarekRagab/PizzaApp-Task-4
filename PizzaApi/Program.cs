@@ -38,26 +38,50 @@ app.MapGet("/components", async () =>
 app.MapPost("/createPizza", async([FromBody] Order receivedOrder) =>
 {
     using var adapter = new DataAccessAdapter();
+    var metaData = new LinqMetaData(adapter);
+    var toppings = await metaData.PizzaTopping.ToListAsync();
+    var sizes = await metaData.PizzaSize.ToListAsync();
+    var sides = await metaData.PizzaSide.ToListAsync();
     adapter.StartTransaction(IsolationLevel.ReadCommitted, "MultiEntityInsertion");
     OrdersListEntity orderRow = new OrdersListEntity();
     orderRow.Id = receivedOrder.UserId;
     var orderId = orderRow.Id;
-    //orderRow.NumberOfPizzas = receivedOrder.NumOfPizzas;
-    orderRow.TotalPrice = receivedOrder.OrderPrice();
+    orderRow.TotalPrice = receivedOrder.TotalPrice;
     await adapter.SaveEntityAsync(orderRow, true);
     adapter.Commit();
     adapter.StartTransaction(IsolationLevel.ReadCommitted, "MultiEntityInsertion");
-    foreach (var pizza in receivedOrder.ListOfPizzas)
+    PizzasListEntity pizzaRow = new PizzasListEntity();
+    pizzaRow.Topping = receivedOrder.Pizza.Topping.Type;
+    pizzaRow.Size = receivedOrder.Pizza.Size.Type;
+    pizzaRow.OrderId = orderId;
+    pizzaRow.Side = receivedOrder.Pizza.Side.Type;
+    double toppingPrice = 0.0;
+    double sidePrice = 0.0;
+    double sizePrice = 0.0;
+    foreach (var item in toppings)
     {
-        PizzasListEntity pizzaRow = new PizzasListEntity();
-        pizzaRow.Topping = pizza.Topping.Type;
-        pizzaRow.Size = pizza.Size.Type;
-        pizzaRow.OrderId = orderId;
-        pizzaRow.Side = pizza.Side.Type;
-        pizzaRow.PricePerPizza = pizza.CalculatePrice();
-        await adapter.SaveEntityAsync(pizzaRow, true);
-        adapter.Commit();
+        if (item.Type == receivedOrder.Pizza.Topping.Type)
+        {
+            toppingPrice = item.Price;
+        }
     }
+    foreach (var item in sizes)
+    {
+        if (item.Type == receivedOrder.Pizza.Size.Type)
+        {
+            sizePrice = item.Price;
+        }
+    }
+    foreach (var item in sides)
+    {
+        if (item.Type == receivedOrder.Pizza.Side.Type)
+        {
+            sidePrice = item.Price;
+        }
+    }
+    pizzaRow.PricePerPizza = receivedOrder.Pizza.CalculatePrice(toppingPrice, sizePrice, sidePrice);
+    await adapter.SaveEntityAsync(pizzaRow, true);
+    adapter.Commit();
     return new OkObjectResult(receivedOrder);
 });
 

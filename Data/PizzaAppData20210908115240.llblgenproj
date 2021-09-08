@@ -98,27 +98,27 @@
   <EntityModel>
     <ValueTypeDefinitions />
     <EntityDefinitions>
-      <EntityDefinition Name="OrdersList" ObjectID="028e5bcc-f77c-4ea3-9214-36400b0f489b">
+      <EntityDefinition Name="OrdersList" ObjectID="8e70cb59-0e03-4a07-8461-5b9732310eb6">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="TotalPrice" Type="double" Precision="38" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaSide" ObjectID="815f0789-dd5f-4eb0-a6d5-8bd26760559e">
+      <EntityDefinition Name="PizzaSide" ObjectID="92cfbaaf-9b1d-4e80-9fc9-3a87e3a0594b">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
           <Field Name="Type" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaSize" ObjectID="b62d5799-f8e7-4f97-925b-401b1dfd6549">
+      <EntityDefinition Name="PizzaSize" ObjectID="d70c34fe-c873-4f88-8f6e-742df3095447">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
           <Field Name="Type" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzasList" ObjectID="14a82f1a-b475-4fe6-a41e-fd3fb1109175">
+      <EntityDefinition Name="PizzasList" ObjectID="d6d81b7f-e27c-421f-8243-6bf1357133a6">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="OrderId" Type="int" Precision="10" IsPrimaryKey="true" />
@@ -128,7 +128,7 @@
           <Field Name="Topping" Type="string" MaxLength="1073741824" />
         </Fields>
       </EntityDefinition>
-      <EntityDefinition Name="PizzaTopping" ObjectID="dcd01af4-a133-484a-81a0-cef70c0b9075">
+      <EntityDefinition Name="PizzaTopping" ObjectID="8757a5d8-f3a1-4a4d-b0e9-18b66c5a2e56">
         <Fields>
           <Field Name="Id" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
           <Field Name="Price" Type="double" Precision="38" />
@@ -161,7 +161,7 @@
       <Catalogs>
         <Catalog Name="pizza_app" SyncSource="2">
           <Schemas>
-            <Schema Name="public" SyncSource="2" LastSyncWithDatabase="2021-09-06T14:14:22.67909Z">
+            <Schema Name="public" SyncSource="2" LastSyncWithDatabase="2021-09-08T09:52:10.8341135Z">
               <Sequences>
                 <Sequence Name="orders_list_id_seq" />
                 <Sequence Name="pizza_sides_id_seq" />

@@ -12,10 +12,10 @@
     <PackageReference Include="SD.LLBLGen.Pro.DQE.PostgreSql" Version="5.8.2" />
     <PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses" Version="5.8.2" />
   </ItemGroup>
-<ItemGroup>
-    <ProjectReference Include="..\Data\DatabaseGeneric\PizzaAppData.csproj" />
-    <ProjectReference Include="..\Data\DatabaseSpecific\PizzaAppDataDBSpecific.csproj" />
-    <ProjectReference Include="..\Data\OrderView.Persistence\OrderView.Persistence.csproj" />
-    <ProjectReference Include="..\Data\OrderView\OrderView.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Data\DatabaseGeneric\PizzaAppData.csproj" />
+		<ProjectReference Include="..\Data\DatabaseSpecific\PizzaAppDataDBSpecific.csproj" />
+		<ProjectReference Include="..\Data\OrderView.Persistence\OrderView.Persistence.csproj" />
+		<ProjectReference Include="..\Data\OrderView\OrderView.csproj" />
+	</ItemGroup>
 </Project>

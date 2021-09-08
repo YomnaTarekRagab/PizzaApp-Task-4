@@ -8,10 +8,9 @@ namespace PizzaAppRazor.DTOs
 {
     public class Order
     {
-        private const float _taxes = 15.0f;
+        private const double _taxes = 15.0;
         private static int _currentId = 0;
-        public float TotalPrice { get; set; }
-        //public int NumOfPizzas { get; set; }
+        public double TotalPrice { get; set; }
         public int UserId
         {
             get
@@ -20,29 +19,15 @@ namespace PizzaAppRazor.DTOs
             }
         }
         [Required]
-        public List<Pizza> ListOfPizzas { get; set; } = new List<Pizza>();
+        public Pizza Pizza { get; set; } 
         public Order()
         {
             _currentId++;
         }
-        public bool AddPizza(Pizza tobeAddedPizza)
+  
+        public double OrderPrice()
         {
-            try
-            {
-                ListOfPizzas.Add(tobeAddedPizza);
-                return true;
-            }
-            catch (KeyNotFoundException)
-            {
-                return false;
-            }
-        }
-        public float OrderPrice()
-        {
-            foreach (Pizza item in ListOfPizzas)
-            {
-                TotalPrice += item.CalculatePrice();
-            }
+            TotalPrice += this.Pizza.PricePerPizza;
             TotalPrice += _taxes;
             return this.TotalPrice;
         }
@@ -50,25 +35,27 @@ namespace PizzaAppRazor.DTOs
 
     public class Pizza
     {
-        public record TypeXPrice(string Type, float Price);
-        private float _price = 0;
+        public record TypeXPrice(string Type, double Price);
+        [Required]
+        public double PricePerPizza = 0;
         [Required]
         public TypeXPrice Topping { get; set; }
         [Required]
         public TypeXPrice Size { get; set; }
         [Required]
         public TypeXPrice Side { get; set; }
-        public float CalculatePrice()
+        public double CalculatePrice(double top, double size, double side)
         {
-            if (this._price == 0)
+            if (this.PricePerPizza == 0)
             {
-                this._price += this.Topping.Price + this.Size.Price + this.Side.Price;
+                this.PricePerPizza = top + size + side;
             }
-            return this._price;
+            return this.PricePerPizza;
         }
+
     }
 
-    public record TypeXPrice(string Type, float Price);
+    public record TypeXPrice(string Type, double Price);
     public class PizzaModel
     {
         public List<TypeXPrice> Toppings { get; set; }

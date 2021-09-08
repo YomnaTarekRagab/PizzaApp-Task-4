@@ -10,18 +10,8 @@
 <div>
     <h4 class="text-success fst-italic">Start placing your order...</h4>
     
-    <form asp-page-handler="OnPost" method="post">
-        <h5 class="text-primary fst-italic">Choose the number of pizzas you want to order:</h5>
-        <select asp-for="NumOfPizzasOrder" name ="NumOfPizzasOrder" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        @*<input type="number" min="1" asp-for="NumOfPizzasOrder" name="NumOfPizzasOrder" />*@
-        @*<input type="submit" asp-page="/OrderForm" asp-route-numOfPizzasOrder=@Model.NumOfPizzasOrder/>*@
-        <button type="submit" class="btn btn-primary">Next</button>
+    <form method="post">
+        <button type="submit" class="btn btn-primary">Start your Order!!</button>
     </form>
 </div>
 

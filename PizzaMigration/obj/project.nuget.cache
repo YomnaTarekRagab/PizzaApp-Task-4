@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ADbMP3WcXJOIWm3IXmibvPERIVKfhqbvlNtuCFSatzIsPBjxrJub7EWz8TRuoir+gfVYeQ4xrc+0yW8B4u6RJQ==",
+  "dgSpecHash": "oTKcdMMUQffcGci1v91z0hoR6EiPT+s0wKmr8G/FXXUuwEzyjpN6KAbGg9uTg37rVDb5RoYZ1EBVUhbbgaRYEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\dell\\Desktop\\PizzaApp-Task-4\\PizzaMigration\\PizzaMigration.csproj",
   "expectedPackageFiles": [
@@ -48,9 +48,7 @@
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\spectre.console\\0.40.1-preview.0.22\\spectre.console.0.40.1-preview.0.22.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.commandline\\2.0.0-beta1.21308.1\\system.commandline.2.0.0-beta1.21308.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
@@ -67,8 +65,7 @@
     "C:\\Users\\dell\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\dell\\.nuget\\packages\\wcwidth\\0.2.0\\wcwidth.0.2.0.nupkg.sha512"
+    "C:\\Users\\dell\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

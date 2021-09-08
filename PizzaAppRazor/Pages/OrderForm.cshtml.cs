@@ -17,55 +17,81 @@ namespace PizzaAppRazor.Pages
         private readonly IHttpClientFactory _clientFactory;
         public PizzaModel PizzaMenu { get; set; }
         [BindProperty]
-        public Order PrefOrder { get; set; } = new Order();
-        [BindProperty]
-        public Pizza SinglePizza { get; set; } = new Pizza ();
-       
+        public Order PrefOrder { get; set; }
+        public string baseUrl = "http://localhost:5000/";
+        public static List<TypeXPrice> Toppings { get; set; } = new List<TypeXPrice>();
+        public static List<TypeXPrice> Sizes { get; set; } = new List<TypeXPrice>();
+        public static List<TypeXPrice> Sides { get; set; } = new List<TypeXPrice>();
+        public double toppingPrice = 0.0;
+        public double sizePrice = 0.0;
+        public double sidePrice = 0.0;
+
         public OrderFormModel(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
-            
         }
-
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            //Console.WriteLine($"hello:{ TempData["NumOfPizzasOrder"]}");
-            //var num = JsonConvert.DeserializeObject<string>(TempData["NumOfPizzasOrder"].ToString());
-            //NumOfPizzasForm = Convert.ToInt32(num);
-            //PrefOrder.NumOfPizzas =NumOfPizzasForm;
-            var request = new HttpRequestMessage(HttpMethod.Get, "/components");
             var client = _clientFactory.CreateClient("PizzaAppApi");
-            var response = await client.SendAsync(request);
-            if (response.IsSuccessStatusCode)
+            string components = await client.GetStringAsync(baseUrl + "components");
+            var options = new JsonSerializerOptions
             {
-                var serializedResponse = await response.Content.ReadAsStringAsync();
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                };
-                PizzaMenu = System.Text.Json.JsonSerializer.Deserialize<PizzaModel>(serializedResponse, options);
+                PropertyNameCaseInsensitive = true
+            };
+            PizzaMenu = System.Text.Json.JsonSerializer.Deserialize<PizzaModel>(components, options);
+            foreach (var item in PizzaMenu.Toppings)
+            {
+                Toppings.Add(item);
+            }
+            foreach (var item in PizzaMenu.Sizes)
+            {
+                Sizes.Add(item);
+            }
+            foreach (var item in PizzaMenu.Sides)
+            {
+                Sides.Add(item);
             }
         }
 
-       
-        //public void AddPizzaToOrder()
-        //{
-        //    PrefOrder.AddPizza(this.SinglePizza);
-        //    Console.WriteLine($"Lists:{PrefOrder.ListOfPizzas}");
-
-        //}
-
-        public async Task <IActionResult> OnPost()
+        public void SetPriceForEachType()
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "/createPizza");
-            request.Headers.Add("Accept", "application/json");
-            request.Content = new StringContent(JsonConvert.SerializeObject(PrefOrder), System.Text.Encoding.UTF8, "application/json");
-            var client = _clientFactory.CreateClient("PizzaAppApi");
-            var response = await client.SendAsync(request);
-            return RedirectToPage("/Index");
+            foreach (var item in Toppings)
+            {
+                if (item.Type == this.PrefOrder.Pizza.Topping.Type)
+                {
+                    toppingPrice = item.Price;
+                }
+            }
+            foreach (var item in Sizes)
+            {
+                if (item.Type == this.PrefOrder.Pizza.Size.Type)
+                {
+                    sizePrice = item.Price;
+                }
+            }
+            foreach (var item in Sides)
+            {
+                if (item.Type == this.PrefOrder.Pizza.Side.Type)
+                {
+                    sidePrice = item.Price;
+                }
+            }
         }
 
-
+        public async Task <IActionResult> OnPostAsync()
+        {
+            SetPriceForEachType();
+            PrefOrder.Pizza.CalculatePrice(toppingPrice,sizePrice,sidePrice);
+            PrefOrder.OrderPrice();
+            var myContent = JsonConvert.SerializeObject(PrefOrder);
+            var client = _clientFactory.CreateClient("PizzaAppApi");
+            var stringContent = new StringContent(myContent, System.Text.Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(baseUrl + "createPizza", stringContent);
+            //if (response.IsSuccessStatusCode)
+            //{
+     
+            //}
+            return RedirectToPage("/Index");
+        }
     }
-
 }
