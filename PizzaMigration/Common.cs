@@ -1,5 +1,4 @@
 ﻿using FluentMigrator.Builders.Create.Table;
-using PizzaApp;
 using System.Collections.Generic;
 
 namespace PizzaMigration

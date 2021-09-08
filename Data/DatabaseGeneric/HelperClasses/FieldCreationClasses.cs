@@ -15,8 +15,6 @@ namespace PizzaAppData.HelperClasses
 	{
 		/// <summary>Creates a new OrdersListEntity.Id field instance</summary>
 		public static EntityField2 Id { get { return ModelInfoProviderSingleton.GetInstance().CreateField2(OrdersListFieldIndex.Id); }}
-		/// <summary>Creates a new OrdersListEntity.NumberOfPizzas field instance</summary>
-		public static EntityField2 NumberOfPizzas { get { return ModelInfoProviderSingleton.GetInstance().CreateField2(OrdersListFieldIndex.NumberOfPizzas); }}
 		/// <summary>Creates a new OrdersListEntity.TotalPrice field instance</summary>
 		public static EntityField2 TotalPrice { get { return ModelInfoProviderSingleton.GetInstance().CreateField2(OrdersListFieldIndex.TotalPrice); }}
 	}

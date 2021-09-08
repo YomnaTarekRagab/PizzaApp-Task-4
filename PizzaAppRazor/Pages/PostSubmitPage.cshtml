@@ -1,0 +1,17 @@
+﻿@page
+@model PostSubmitPageModel
+@{
+    ViewData["Title"] = "Pizza Ordering App";
+}
+<div class="text-center">
+    <h1 class="display-2 text-warning fst-italic fw-bold">Pizza Ordering App</h1>
+    <div class="alert alert-@TempData["class-style"]" role="alert">
+        @TempData["Message"]
+    </div>
+    <h4 class="text-danger">Would you like to place a new order?</h4>
+    <form method="post">
+        <div class="align-items-center">
+            <button type="submit" class="btn btn-primary" href="/Index">Click Here!</button>
+        </div>
+    </form>
+</div>

@@ -148,14 +148,6 @@ namespace PizzaAppData.EntityClasses
 			get { return (System.Int32)GetValue((int)OrdersListFieldIndex.Id, true); }
 			set { SetValue((int)OrdersListFieldIndex.Id, value); }		}
 
-		/// <summary>The NumberOfPizzas property of the Entity OrdersList<br/><br/></summary>
-		/// <remarks>Mapped on  table field: "orders_list"."number_of_pizzas".<br/>Table field type characteristics (type, precision, scale, length): Integer, 10, 0, 0.<br/>Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.Int32 NumberOfPizzas
-		{
-			get { return (System.Int32)GetValue((int)OrdersListFieldIndex.NumberOfPizzas, true); }
-			set	{ SetValue((int)OrdersListFieldIndex.NumberOfPizzas, value); }
-		}
-
 		/// <summary>The TotalPrice property of the Entity OrdersList<br/><br/></summary>
 		/// <remarks>Mapped on  table field: "orders_list"."total_price".<br/>Table field type characteristics (type, precision, scale, length): Double, 38, 0, 0.<br/>Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.Double TotalPrice
@@ -180,8 +172,6 @@ namespace PizzaAppData
 	{
 		///<summary>Id. </summary>
 		Id,
-		///<summary>NumberOfPizzas. </summary>
-		NumberOfPizzas,
 		///<summary>TotalPrice. </summary>
 		TotalPrice,
 		/// <summary></summary>
