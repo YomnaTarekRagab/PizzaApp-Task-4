@@ -15,7 +15,6 @@ namespace PizzaMigration.Migrations
             Create.Table("orders_list")
                             .WithIdColumn()
                             .WithColumn("total_price").AsDouble().NotNullable();
-                            
         }
     }
 }
