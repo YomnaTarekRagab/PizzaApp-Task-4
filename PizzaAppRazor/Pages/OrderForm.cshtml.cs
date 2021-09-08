@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PizzaAppRazor.DTOs;
-using PizzaAppRazor.Pages;
 using Newtonsoft.Json;
  
 namespace PizzaAppRazor.Pages
@@ -80,18 +79,33 @@ namespace PizzaAppRazor.Pages
 
         public async Task <IActionResult> OnPostAsync()
         {
-            SetPriceForEachType();
-            PrefOrder.Pizza.CalculatePrice(toppingPrice,sizePrice,sidePrice);
-            PrefOrder.OrderPrice();
-            var myContent = JsonConvert.SerializeObject(PrefOrder);
-            var client = _clientFactory.CreateClient("PizzaAppApi");
-            var stringContent = new StringContent(myContent, System.Text.Encoding.UTF8, "application/json");
-            var response = await client.PostAsync(baseUrl + "createPizza", stringContent);
-            //if (response.IsSuccessStatusCode)
-            //{
-     
-            //}
-            return RedirectToPage("/Index");
+            if (!ModelState.IsValid)
+            {
+                @TempData["Message"] = "Sorry, we couldn't place your order";
+                @TempData["class-style"] = "danger";
+                return Redirect("/PostSubmitPage");
+            }
+            else
+            {
+                SetPriceForEachType();
+                PrefOrder.Pizza.CalculatePrice(toppingPrice, sizePrice, sidePrice);
+                PrefOrder.OrderPrice();
+                var myContent = JsonConvert.SerializeObject(PrefOrder);
+                var client = _clientFactory.CreateClient("PizzaAppApi");
+                var stringContent = new StringContent(myContent, System.Text.Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(baseUrl + "createPizza", stringContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    @TempData["Message"] = "Your Order has been created successfully!!";
+                    @TempData["class-style"] = "success";
+                }
+                else
+                {
+                    @TempData["Message"] = "Sorry, we couldn't place your order";
+                    @TempData["class-style"] = "danger";
+                }
+                return Redirect("/PostSubmitPage");
+            }
         }
     }
 }

@@ -44,11 +44,11 @@ namespace PizzaAppRazor.DTOs
         public TypeXPrice Size { get; set; }
         [Required]
         public TypeXPrice Side { get; set; }
-        public double CalculatePrice(double top, double size, double side)
+        public double CalculatePrice(double topPrice, double sizePrice, double sidePrice)
         {
             if (this.PricePerPizza == 0)
             {
-                this.PricePerPizza = top + size + side;
+                this.PricePerPizza = topPrice + sizePrice + sidePrice;
             }
             return this.PricePerPizza;
         }
@@ -63,4 +63,3 @@ namespace PizzaAppRazor.DTOs
         public List<TypeXPrice> Sides { get; set; }
     }
 }
-

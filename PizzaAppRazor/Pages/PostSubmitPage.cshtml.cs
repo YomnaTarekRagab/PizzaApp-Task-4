@@ -8,17 +8,11 @@ using System.Threading.Tasks;
 
 namespace PizzaAppRazor.Pages
 {
-    public class PrivacyModel : PageModel
+    public class PostSubmitPageModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
-
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public IActionResult OnPost()
         {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
+            return Redirect("/Index");
         }
     }
 }
