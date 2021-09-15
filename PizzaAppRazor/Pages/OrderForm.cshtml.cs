@@ -16,6 +16,7 @@ namespace PizzaAppRazor.Pages
         private readonly IHttpClientFactory _clientFactory;
         public PizzaModel PizzaMenu { get; set; }
         [BindProperty]
+        public Pizza PizzaChoice { get; set; }
         public Order PrefOrder { get; set; }
         public string baseUrl = "http://localhost:5000/";
         public static List<TypeXPrice> Toppings { get; set; } = new List<TypeXPrice>();
@@ -56,21 +57,21 @@ namespace PizzaAppRazor.Pages
         {
             foreach (var item in Toppings)
             {
-                if (item.Type == this.PrefOrder.Pizza.Topping.Type)
+                if (item.Type == PizzaChoice.Topping)
                 {
                     toppingPrice = item.Price;
                 }
             }
             foreach (var item in Sizes)
             {
-                if (item.Type == this.PrefOrder.Pizza.Size.Type)
+                if (item.Type == PizzaChoice.Size)
                 {
                     sizePrice = item.Price;
                 }
             }
             foreach (var item in Sides)
             {
-                if (item.Type == this.PrefOrder.Pizza.Side.Type)
+                if (item.Type == PizzaChoice.Side)
                 {
                     sidePrice = item.Price;
                 }
@@ -88,7 +89,12 @@ namespace PizzaAppRazor.Pages
             else
             {
                 SetPriceForEachType();
-                PrefOrder.Pizza.CalculatePrice(toppingPrice, sizePrice, sidePrice);
+                PizzaChoice.CalculatePrice(toppingPrice, sizePrice, sidePrice);
+                PrefOrder = new Order
+                {
+                    Pizza = new Pizza()
+                };
+                PrefOrder.SetPizzaOrder(PizzaChoice);
                 PrefOrder.OrderPrice();
                 var myContent = JsonConvert.SerializeObject(PrefOrder);
                 var client = _clientFactory.CreateClient("PizzaAppApi");

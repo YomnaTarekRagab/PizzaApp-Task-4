@@ -6,9 +6,9 @@ namespace PizzaApp
     {
         public record TypeXPrice(string Type, double Price);
         public double PricePerPizza = 0;
-        public TypeXPrice Topping { get; set; }
-        public TypeXPrice Size { get; set; }
-        public TypeXPrice Side { get; set; }
+        public string Topping { get; set; }
+        public string Size { get; set; }
+        public string Side { get; set; }
         public double CalculatePrice(double topPrice, double sizePrice, double sidePrice)
         {
             if (this.PricePerPizza == 0)

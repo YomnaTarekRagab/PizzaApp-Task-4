@@ -24,6 +24,12 @@ namespace PizzaAppRazor.DTOs
         {
             _currentId++;
         }
+
+        public void SetPizzaOrder(Pizza pizza)
+        {
+            Pizza = pizza;
+            return;
+        }
   
         public double OrderPrice()
         {
@@ -37,13 +43,13 @@ namespace PizzaAppRazor.DTOs
     {
         public record TypeXPrice(string Type, double Price);
         [Required]
-        public double PricePerPizza = 0;
-        [Required]
-        public TypeXPrice Topping { get; set; }
-        [Required]
-        public TypeXPrice Size { get; set; }
-        [Required]
-        public TypeXPrice Side { get; set; }
+         public double PricePerPizza = 0;
+        [Required(ErrorMessage = "Please select a Topping!!")]
+        public string Topping { get; set; }
+        [Required(ErrorMessage = "Please select a Size!!")]
+        public string Size { get; set; }
+        [Required(ErrorMessage = "Please select a Side!!")]
+        public string Side { get; set; }
         public double CalculatePrice(double topPrice, double sizePrice, double sidePrice)
         {
             if (this.PricePerPizza == 0)
@@ -52,7 +58,6 @@ namespace PizzaAppRazor.DTOs
             }
             return this.PricePerPizza;
         }
-
     }
 
     public record TypeXPrice(string Type, double Price);

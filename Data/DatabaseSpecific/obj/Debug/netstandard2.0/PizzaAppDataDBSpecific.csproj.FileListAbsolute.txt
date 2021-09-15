@@ -1,0 +1,11 @@
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\bin\Debug\netstandard2.0\PizzaAppDataDBSpecific.dll.config
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\bin\Debug\netstandard2.0\PizzaAppDataDBSpecific.deps.json
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\bin\Debug\netstandard2.0\PizzaAppDataDBSpecific.dll
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\bin\Debug\netstandard2.0\PizzaAppDataDBSpecific.pdb
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.csproj.AssemblyReference.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.AssemblyInfoInputs.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.AssemblyInfo.cs
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.dll
+C:\Users\dell\Desktop\PizzaApp-Task-4\Data\DatabaseSpecific\obj\Debug\netstandard2.0\PizzaAppDataDBSpecific.pdb

@@ -51,30 +51,30 @@ app.MapPost("/createPizza", async([FromBody] Order receivedOrder) =>
     adapter.Commit();
     adapter.StartTransaction(IsolationLevel.ReadCommitted, "MultiEntityInsertion");
     PizzasListEntity pizzaRow = new PizzasListEntity();
-    pizzaRow.Topping = receivedOrder.Pizza.Topping.Type;
-    pizzaRow.Size = receivedOrder.Pizza.Size.Type;
+    pizzaRow.Topping = receivedOrder.Pizza.Topping;
+    pizzaRow.Size = receivedOrder.Pizza.Size;
     pizzaRow.OrderId = orderId;
-    pizzaRow.Side = receivedOrder.Pizza.Side.Type;
+    pizzaRow.Side = receivedOrder.Pizza.Side;
     double toppingPrice = 0.0;
     double sidePrice = 0.0;
     double sizePrice = 0.0;
     foreach (var item in toppings)
     {
-        if (item.Type == receivedOrder.Pizza.Topping.Type)
+        if (item.Type == receivedOrder.Pizza.Topping)
         {
             toppingPrice = item.Price;
         }
     }
     foreach (var item in sizes)
     {
-        if (item.Type == receivedOrder.Pizza.Size.Type)
+        if (item.Type == receivedOrder.Pizza.Size)
         {
             sizePrice = item.Price;
         }
     }
     foreach (var item in sides)
     {
-        if (item.Type == receivedOrder.Pizza.Side.Type)
+        if (item.Type == receivedOrder.Pizza.Side)
         {
             sidePrice = item.Price;
         }
