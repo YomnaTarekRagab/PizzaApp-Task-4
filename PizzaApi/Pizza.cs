@@ -5,7 +5,7 @@ namespace PizzaApp
     public class Pizza
     {
         public record TypeXPrice(string Type, double Price);
-        public double PricePerPizza = 0;
+        public double PricePerPizza { get; set; }
         public string Topping { get; set; }
         public string Size { get; set; }
         public string Side { get; set; }

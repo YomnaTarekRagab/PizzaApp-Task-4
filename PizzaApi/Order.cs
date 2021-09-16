@@ -19,6 +19,13 @@ namespace PizzaApp
         {
             _currentId++;
         }
+
+        public void SetPizzaOrder(Pizza pizza)
+        {
+            Pizza = pizza;
+            return;
+        }
+
         public double OrderPrice()
         {
             TotalPrice += this.Pizza.PricePerPizza;
